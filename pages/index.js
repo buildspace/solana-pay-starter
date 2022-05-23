@@ -1,35 +1,28 @@
 import React from "react";
 import HeadComponent from '../components/Head';
-
-// Constants
-const TWITTER_HANDLE = "_buildspace";
-const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
+import Footer from '../components/footer';
 
 const App = () => {
-  
-  
+
   return (
     <div className="App">
       <HeadComponent/>
       <div className="container">
         <header className="header-container">
-          <p className="header"> 😳 Buildspace Emoji Store 😈</p>
-          <p className="sub-text">The only emoji store that accepts sh*tcoins</p>
+          <p className="header"> Dark Moon Market</p>
         </header>
 
         <main>
-          <img src="https://media.giphy.com/media/eSwGh3YK54JKU/giphy.gif" alt="emoji" />
+          <div style={{ display:'flex', justifyContent:'center' }}>
+        <div className="card bg-blur">
+            <p className="sub-text">Simple trade. Your sh*tcoins. For NFTs.</p>
+            </div>
+            <div className="card bg-blur">
+          <img className="cat-logo" src="cat-logo.png" alt="cat" />
+          </div>
+          </div>
         </main>
-
-        <div className="footer-container">
-          <img alt="Twitter Logo" className="twitter-logo" src="twitter-logo.svg" />
-          <a
-            className="footer-text"
-            href={TWITTER_LINK}
-            target="_blank"
-            rel="noreferrer"
-          >{`built on @${TWITTER_HANDLE}`}</a>
-        </div>
+        <Footer/>
       </div>
     </div>
   );
