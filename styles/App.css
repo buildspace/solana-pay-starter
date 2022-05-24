@@ -130,7 +130,7 @@ button:disabled {
   justify-content: center;
   position: relative;
   backdrop-filter: blur(14px);
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(0, 0, 0);
   border-radius: 10px;
 }
 
@@ -217,6 +217,23 @@ button:disabled {
   align-items: center;
   margin-top: 20px;
 }
+
+.products-card {
+  margin: 1rem;
+  padding: 1rem;
+  height: 420px;
+  width: 300px;
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  backdrop-filter: blur(14px);
+  background-color: rgb(0, 255, 17);
+  border-radius: 10px;
+}
+
 /* KeyFrames */
 @-webkit-keyframes gradient-animation {
   0% {
