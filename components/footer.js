@@ -9,7 +9,7 @@ export default function Footer() {
   
   return (
         <div className="footer-container">
-          <img alt="Twitter Logo" className="twitter-logo" src="twitter-logo.svg" />
+          <img alt="Twitter Logo" className="twitter-logo" src="twitter-512.png" />
           <a
             className="footer-text"
             href={TWITTER_LINK}

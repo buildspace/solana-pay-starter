@@ -49,7 +49,7 @@ const App = () => {
       <HeadComponent/>
       <div className="container">
         <header className="header-container">
-          <p className="header"> Dark Moon Market</p>
+          <p className="header">DarkMoon🌑Market</p>
         </header>
         <main>
           {publicKey ? renderItemBuyContainer() : renderNotConnectedContainer()}

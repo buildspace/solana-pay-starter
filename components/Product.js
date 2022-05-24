@@ -18,7 +18,7 @@ export default function Product({ product }) {
         </div>
 
         <div className={styles.product_action}>
-          <div className={styles.product_price}>{price} USDC</div>
+          <div className={styles.product_price}>{price} USDC </div>
             {/* Replace the IPFS component with the Buy component! */}
             <Buy itemID={id} />
         </div>

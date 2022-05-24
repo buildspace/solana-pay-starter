@@ -7,7 +7,7 @@ export default function HeadComponent() {
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta name="theme-color" content="#000000" />
 
-      <title>Dark Moon Market</title>
+      <title>Dark Moon🌑Market</title>
       <meta name="title" content="Dark Moon Market" />
       <meta name="description" content="Buy items on my store using Solana Pay!" />
 

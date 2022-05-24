@@ -1,6 +1,6 @@
 .App {
   height: 100vh;
-  background-color: rgb(20, 20, 20);
+  background-color:  #210125;
   text-align: center;
   overflow: hidden;
 }
@@ -113,7 +113,7 @@ button:disabled {
 }
 
 .card body {
-  background-color: #1D1E22;
+  background-color: #210125;
   font-family: sans-serif;
   display: flex;
 }
@@ -163,7 +163,7 @@ button:disabled {
   height: 60px;
   font-size: 16px;
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: #210125;
   border: none;
   border-radius: 10px;
   margin: 50px auto;
@@ -174,21 +174,26 @@ button:disabled {
 }
 
 .buy-button {
-  border: none;
-  background-color: #4664ff;
-  color: #fff;
+  color: white;
+  background: -webkit-linear-gradient(left, #000000, #059e00);
+  background-size: 200% 200%;
+  animation: gradient-animation 3s ease infinite;
   font-size: 16px;
-  border-radius: 3px;
+  border-radius: 1px;
+  border-color: white;
   padding: 8px 16px;
   cursor: pointer;
 }
 
 .download-button {
   border: none;
-  background-color: #4664ff;
-  color: #fff;
+  background: -webkit-linear-gradient(left, #059e00, #63006c);
+  background-size: 200% 200%;
+  animation: gradient-animation 8s ease infinite;
+  color: white;
   font-size: 16px;
-  border-radius: 3px;
+  border-radius: 1px;
+  border-color: white;
   padding: 8px 16px;
   cursor: pointer;
 }
@@ -222,7 +227,7 @@ button:disabled {
   margin: 1rem;
   padding: 1rem;
   height: 420px;
-  width: 300px;
+  width: 380px;
   text-align: center;
   color: white;
   display: flex;
@@ -230,7 +235,7 @@ button:disabled {
   justify-content: center;
   position: relative;
   backdrop-filter: blur(14px);
-  background-color: rgb(0, 255, 17);
+  background-color: rgba(0, 255, 17, 0.811);
   border-radius: 10px;
 }
 
