@@ -5,6 +5,8 @@ import BigNumber from "bignumber.js";
 import products from "./products.json";
 
 // CONSTANTS
+// const testusdcAddress = new PublicKey("Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr");
+// const usdcAddress = new PublicKey("EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v");
 const usdcAddress = new PublicKey("Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr");
 const sellerAddress = "D634DffotYWawXWqwHmvWksirFYY7qQ1oRQohL7LCbTV";
 const sellerPublicKey = new PublicKey(sellerAddress);

@@ -16,7 +16,8 @@ import "../styles/globals.css";
 import "../styles/App.css";
 
 const App = ({ Component, pageProps }) => {
-  // Can be set to 'devnet', 'testnet', or 'mainnet-beta'
+  // Can be set to 'devnet', 'testnet', or 'mainnet-beta' (next line)
+  // const network = WalletAdapterNetwork.mainnet-beta;
   const network = WalletAdapterNetwork.Devnet;
 
   // You can also provide a custom RPC endpoint
