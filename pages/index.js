@@ -7,8 +7,8 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 // Constants
-const TWITTER_HANDLE = "TopShotTurtles";
-const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
+const BLOG_LINK = `https://rebeccaandmatt.com`;
+const FOODBLOG_LINK = `https://rebeccacoady.com`;
 
 const App = () => {
   const { publicKey } = useWallet();
@@ -42,6 +42,7 @@ const App = () => {
       {products.map((product) => (
         <Product key={product.id} product={product} />
       ))}
+      <img className="banner-container" src="https://bafybeic5pee4axu2ghufdjmdbs4bvwhjwbzid6agalpvxk5ux3s67vh7w4.ipfs.infura-ipfs.io/" alt="emoji" />
     </div>
   );
 
@@ -50,8 +51,8 @@ const App = () => {
       <HeadComponent/>
       <div className="container">
         <header className="header-container">
-          <p className="header"> 🥑 Becca's Veggies Recipes 🥕</p>
-          <p className="sub-text">The only recipe store that accepts shitcoins</p>
+          <p className="header"> 🥑<span className="gradient-text">Becca's Veggies Recipes</span>🥕</p>
+          <p className="sub-text">The only recipe store that accepts s̶h̶i̶t̶c̶o̶i̶n̶s̶ the future of currency!</p>
 
           {isOwner && (
             <button className="create-product-button" onClick={() => setCreating(!creating)}>
@@ -67,13 +68,19 @@ const App = () => {
         </main>
 
         <div className="footer-container">
-          <img alt="Twitter Logo" className="twitter-logo" src="twitter-logo.svg" />
           <a
             className="footer-text"
-            href={TWITTER_LINK}
+            href={BLOG_LINK}
             target="_blank"
             rel="noreferrer"
-          >{`built by @${TWITTER_HANDLE}`}</a>
+          >Travel Blog    |</a>
+          
+          <a
+            className="footer-text"
+            href={FOODBLOG_LINK}
+            target="_blank"
+            rel="noreferrer"
+          >|    Food Blog</a>
         </div>
       </div>
     </div>

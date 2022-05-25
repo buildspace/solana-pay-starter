@@ -1,6 +1,5 @@
 .App {
-  height: 100vh;
-  background-color: rgb(5, 59, 0);
+  background: -webkit-linear-gradient(left, #60c657 30%, #35aee2 60%);
   text-align: center;
   overflow: hidden;
 }
@@ -26,6 +25,7 @@
   margin: 0;
   font-size: 50px;
   font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.19);
 }
 
 .sub-text {
@@ -33,7 +33,7 @@
 }
 
 .gradient-text {
-  background: -webkit-linear-gradient(left, #60c657 30%, #35aee2 60%);
+  background: -webkit-linear-gradient(left, #eaff01 50%, #64e872 60%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -46,6 +46,12 @@
   margin-top: 20px;
   
 }
+
+.banner-container{
+  display:flex;
+  width: 100vw;
+}
+
 .cta-button {
   height: 45px;
   border: 0;
@@ -103,7 +109,7 @@ button:disabled {
 .footer-text {
   font-size: 16px;
   font-weight: bold;
-  color: white;
+  color: black;
 }
 
 .connected-container input[type='text'] {

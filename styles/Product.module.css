@@ -9,11 +9,12 @@
   padding: 20px;
   border-radius: 16px;
   border: 1px solid rgb(104, 104, 104);
-  /* background: url('../public/blur-bg.png') */
+  background: url('../public/blur-bg.png')
 }
 
 .product_card{
-  background-color: #59c86f;
+  background: url('../public/blur-bg.png');
+  opacity: .9;
   margin: 2px;
   padding: 10px;
 }
@@ -44,6 +45,7 @@
 }
 .product_description{
   color:rgb(0, 0, 0);
+  font-weight: bold;
 }
 
 .product_action{
@@ -56,4 +58,5 @@
 
 .product_price{
   font-size: 1.3em;
+  padding-left: 10px;
 }
