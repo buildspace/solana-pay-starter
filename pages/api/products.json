@@ -1,38 +1,38 @@
 [
   {
     "id": 1,
-    "name": "OG Emoji pack",
-    "price": "0.09",
-    "description": "Get this fire emoji pack for only $0.09! Includes 3 hot emojis: Forreal, Flooshed, and Sheesh!",
-    "image_url": "https://i.imgur.com/rVD8bjt.png",
-    "filename": "Emojis.zip",
-    "hash": "QmUd7cMo9myh5ANNpZKr78peRFfYzma5rYjh6Fn8Qfg7K9"
+    "name": "Chocolate Chip & Pumpkin Recipe",
+    "price": "1",
+    "image_url": "https://www.rebeccacoady.com/wp-content/uploads/2019/08/DSC_1431_edited-1-e1634322832920.jpg",
+    "description": "40 minutes to make",
+    "filename": "pumpkinMuffinRecipe.png",
+    "hash": "bafybeiatgfdr3fcxnhznqlhgynord3hikw4yju45ox5kr4gsimre7x6smu"
   },
   {
     "id": 2,
-    "name": "cmon",
+    "name": "Impossible Pasta Sauce",
     "price": "1",
-    "image_url": "https://i.imgur.com/rVD8bjt.png",
-    "description": "broke",
-    "filename": "solPayTest.zip",
-    "hash": "bafybeiciwt3dqe3hln7eowaz4symwlhqrpgk3dtvuac6sddhhdecdync4m"
+    "image_url": "https://www.rebeccacoady.com/wp-content/uploads/2021/03/IMG_4451-scaled.jpeg",
+    "description": "35 minutes to make",
+    "filename": "pastaSauceRecipe.png",
+    "hash": "bafybeid7ox5uotamb32t422qqnx4qqmj5ujrphacdhczlcjetq5v2pyyxu"
   },
   {
     "id": 3,
-    "name": "help",
+    "name": "Creamy Potato & Spinach Soup",
     "price": "1",
-    "image_url": "https://i.imgur.com/rVD8bjt.png",
-    "description": "help meeeeeeee",
-    "filename": "solPayTest.zip",
-    "hash": "bafybeiciwt3dqe3hln7eowaz4symwlhqrpgk3dtvuac6sddhhdecdync4m"
+    "image_url": "https://www.rebeccacoady.com/wp-content/uploads/2021/03/FullSizeRender-2-1.jpeg",
+    "description": "45 min to make",
+    "filename": "spinachSoupRecipe.png",
+    "hash": "bafybeibwywo4bddpifllpnft4acggzxdqv4jbnv266giy4esj22tdy77um"
   },
   {
     "id": 4,
-    "name": "test123",
-    "price": ".2",
-    "image_url": "test image",
-    "description": "no desc",
-    "filename": "solPayTest.zip",
-    "hash": "bafybeiciwt3dqe3hln7eowaz4symwlhqrpgk3dtvuac6sddhhdecdync4m"
+    "name": "Impossible Meatball Recipe",
+    "price": "1",
+    "image_url": "https://www.rebeccacoady.com/wp-content/uploads/2021/04/DSC_0533.jpeg",
+    "description": "1 hr to make",
+    "filename": "meatballRecipe.png",
+    "hash": "bafybeigv4zzitaywsr3dxfptk5psr43s7h5wdcayhlpwqdn6fwrnmxyrhi"
   }
 ]

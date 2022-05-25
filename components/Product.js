@@ -7,6 +7,7 @@ export default function Product({ product }) {
 
     return (
         <div className={styles.product_containter}>
+            <div className={styles.product_card}>
             <div>
                 <img className={styles.product_image} src={image_url} alt={name} />
             </div>
@@ -21,6 +22,7 @@ export default function Product({ product }) {
                     <div className={styles.product_price}>{price} USDC</div>
                     <Buy itemID={id} />
                 </div>
+            </div>
             </div>
         </div>
     );

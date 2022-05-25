@@ -5,12 +5,17 @@
   align-items: center;
   max-width: 320px;
   height: 400px;
-  background-color: #141414;
   margin: 15px;
   padding: 20px;
   border-radius: 16px;
   border: 1px solid rgb(104, 104, 104);
   /* background: url('../public/blur-bg.png') */
+}
+
+.product_card{
+  background-color: #59c86f;
+  margin: 2px;
+  padding: 10px;
 }
 
 .product_image{
@@ -38,7 +43,7 @@
   margin-bottom: 12px;
 }
 .product_description{
-  color:rgb(186, 184, 184);
+  color:rgb(0, 0, 0);
 }
 
 .product_action{

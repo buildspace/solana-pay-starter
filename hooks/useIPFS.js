@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Web3Storage } from 'web3.storage';
 
 const useIPFS = (hash, filename) => {
   const [file, setFile] = useState(null);
