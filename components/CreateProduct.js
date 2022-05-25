@@ -1,11 +1,25 @@
 import React, { useState } from "react";
 import { create } from "ipfs-http-client";
 import styles from "../styles/CreateProduct.module.css";
+import { Web3Storage } from 'web3.storage'
 
-const client = create("https://ipfs.infura.io:5001/api/v0");
+// const client = create("https://ipfs.infura.io:5001/api/v0");
 
 const CreateProduct = () => {
+  function getAccessToken () {
 
+    return 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDI4NDQyNzlkMDRmRDc2NDJDMUQyNzZhQkRmNDI3ZDBkOWJmMGU0NzkiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NTM0MzIxMDY3MjAsIm5hbWUiOiJkZXYifQ.gFBojcATcuBQeXse4O1OAVEIrrmdKPxyHlK83AaqZrQ'
+  
+    // return process.env.WEB3STORAGE_TOKEN
+  }
+  
+  function makeStorageClient () {
+    return new Web3Storage({ token: getAccessToken() })
+  }
+
+  const client = makeStorageClient();
+  
+  
   const [newProduct, setNewProduct] = useState({
     name: "",
     price: "",
@@ -18,10 +32,11 @@ const CreateProduct = () => {
   async function onChange(e) {
     setUploading(true);
     const files = e.target.files;
+    const cid = await client.put(files);
     try {
       console.log(files[0]);
-      const added = await client.add(files[0]);
-      setFile({ filename: files[0].name, hash: added.path });
+      // const added = await client.add(files[0]);
+      setFile({ filename: files[0].name, hash: cid });
     } catch (error) {
       console.log("Error uploading file: ", error);
     }

@@ -63,6 +63,7 @@ const App = () => {
         <main>
           {creating && <CreateProduct />}
           {publicKey ? renderItemBuyContainer() : renderNotConnectedContainer()}
+          
         </main>
 
         <div className="footer-container">
