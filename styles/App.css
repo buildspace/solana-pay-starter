@@ -2,7 +2,7 @@
   background: -webkit-linear-gradient(left, #60c657 30%, #35aee2 60%);
   text-align: center;
   overflow: hidden;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 .container {
@@ -47,6 +47,10 @@
   margin-top: 20px;
   
 }
+
+/* .gif{
+  max-height: 200px;
+} */
 
 .banner-container{
   display:flex;
@@ -94,12 +98,12 @@ button:disabled {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0 px;
   width: 100%;
   bottom: 0;
   left: 0;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
 }
 
 .twitter-logo {
