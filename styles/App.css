@@ -2,6 +2,7 @@
   background: -webkit-linear-gradient(left, #60c657 30%, #35aee2 60%);
   text-align: center;
   overflow: hidden;
+  min-height: 100%;
 }
 
 .container {

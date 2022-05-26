@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Chocolate Chip & Pumpkin Recipe",
+    "name": "Chocolate Chip & Pumpkin Muffins",
     "price": "1",
     "image_url": "https://www.rebeccacoady.com/wp-content/uploads/2019/08/DSC_1431_edited-1-e1634322832920.jpg",
     "description": "40 minutes to make",
@@ -28,7 +28,7 @@
   },
   {
     "id": 4,
-    "name": "Impossible Meatball Recipe",
+    "name": "Impossible Meatballs and ",
     "price": "1",
     "image_url": "https://www.rebeccacoady.com/wp-content/uploads/2021/04/DSC_0533.jpeg",
     "description": "1 hr to make",

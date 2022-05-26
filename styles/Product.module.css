@@ -17,11 +17,16 @@
   opacity: .9;
   margin: 2px;
   padding: 10px;
+  min-height: 375px;;
+  min-width: 300px;
+  max-height: 375px;
+  max-width:300px;
 }
 
 .product_image{
   width: 140px;
   background-color: #141414;
+  max-height: 180px;
 }
 
 .product_details{
@@ -44,6 +49,7 @@
   margin-bottom: 12px;
 }
 .product_description{
+  margin-top: 10px;
   color:rgb(0, 0, 0);
   font-weight: bold;
 }
