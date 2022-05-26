@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Savis Tcott",
+    "price": "400",
+    "description": "Sick picture of Travis Scott",
+    "image_url": "https://i.imgur.com/YrhRgbgl.jpg",
+    "filename": "TravyPics.zip",
+    "hash": "QmbcTZCqWtDijoS5YTQ7ErcdDnynNjNpWCrDDxf2jqCGsC"
+  },
+  {
+    "id": 2,
+    "name": "YE",
+    "price": "0.69",
+    "description": "Get These Sick Pictures of YE",
+    "image_url": "https://i.imgur.com/ZVuOPorl.jpg",
+    "filename": "YE.zip",
+    "hash": "QmR9SRbGDi8wQ2Hbg9BH8vLWXffapxaUz1MzafDJPq7AF9"
+  },
+  {
+    "id": 3,
+    "name": "GunnaPics",
+    "price": "0.08",
+    "image_url": "https://i.imgur.com/NAR7KL8l.jpg",
+    "description": "Sick Pics of Gunna",
+    "filename": "Gunna.zip",
+    "hash": "QmNQTejT1ReX8qvv5cn7d6xTQJCJzvm6FhDAfv2Y7Mm2bG"
+  },
+  {
+    "id": 4,
+    "name": "Nothing",
+    "price": "500",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Black_photo.jpg",
+    "description": "Literally Nothing At All",
+    "filename": "Nothing.zip",
+    "hash": "QmRgEd29LwdURYxFxYC9CgN7ovfx1jbvdPWZc75zPtBpTn"
+  }
+]

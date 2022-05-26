@@ -167,6 +167,8 @@ button:disabled {
   align-items: center;
   margin-top: 20px;
 }
+
+
 /* KeyFrames */
 @-webkit-keyframes gradient-animation {
   0% {
