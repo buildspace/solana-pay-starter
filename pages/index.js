@@ -39,10 +39,11 @@ const App = () => {
 
   const renderItemBuyContainer = () => (
     <div className="products-container">
+      <img className="banner-container" src="https://bafybeic5pee4axu2ghufdjmdbs4bvwhjwbzid6agalpvxk5ux3s67vh7w4.ipfs.infura-ipfs.io/" alt="emoji" />
+      <h3>DATABASE IS BEING WORKED ON, PURCHASES WILL NOT PERSIST ATM, VISIT LINKS FOR FREE RECIPES</h3>
       {products.map((product) => (
         <Product key={product.id} product={product} />
       ))}
-      <img className="banner-container" src="https://bafybeic5pee4axu2ghufdjmdbs4bvwhjwbzid6agalpvxk5ux3s67vh7w4.ipfs.infura-ipfs.io/" alt="emoji" />
     </div>
   );
 
