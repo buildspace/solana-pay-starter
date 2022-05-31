@@ -30,7 +30,6 @@
     "bignumber.js": "^9.0.2",
     "crypto-js": "^4.1.1",
     "ipfs-core": "^0.14.3",
-    "ipfs-http-client": "^56.0.3",
     "next": "^12.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -40,7 +39,6 @@
   "devDependencies": {
     "parcel": "^2.3.1",
     "prettier": "^2.5.1",
-    "shx": "^0.3.3",
-    "tailwindcss": "^3.0.24"
+    "shx": "^0.3.3"
   }
 }

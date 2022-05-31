@@ -5,28 +5,17 @@
   align-items: center;
   max-width: 320px;
   height: 400px;
+  background-color: #141414;
   margin: 15px;
   padding: 20px;
   border-radius: 16px;
   border: 1px solid rgb(104, 104, 104);
-  background: url('../public/blur-bg.png')
-}
-
-.product_card{
-  background: url('../public/blur-bg.png');
-  opacity: .9;
-  margin: 2px;
-  padding: 10px;
-  min-height: 375px;;
-  min-width: 300px;
-  max-height: 375px;
-  max-width:300px;
+  /* background: url('../public/blur-bg.png') */
 }
 
 .product_image{
   width: 140px;
   background-color: #141414;
-  max-height: 180px;
 }
 
 .product_details{
@@ -49,9 +38,7 @@
   margin-bottom: 12px;
 }
 .product_description{
-  margin-top: 10px;
-  color:rgb(0, 0, 0);
-  font-weight: bold;
+  color:rgb(186, 184, 184);
 }
 
 .product_action{
@@ -64,5 +51,4 @@
 
 .product_price{
   font-size: 1.3em;
-  padding-left: 10px;
 }

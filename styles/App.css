@@ -1,8 +1,8 @@
 .App {
-  background: -webkit-linear-gradient(left, #60c657 30%, #35aee2 60%);
+  height: 100vh;
+  background-color: rgb(20, 20, 20);
   text-align: center;
   overflow: hidden;
-  min-height: 100vh;
 }
 
 .container {
@@ -26,7 +26,6 @@
   margin: 0;
   font-size: 50px;
   font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.19);
 }
 
 .sub-text {
@@ -34,7 +33,7 @@
 }
 
 .gradient-text {
-  background: -webkit-linear-gradient(left, #eaff01 50%, #64e872 60%);
+  background: -webkit-linear-gradient(left, #60c657 30%, #35aee2 60%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -47,16 +46,6 @@
   margin-top: 20px;
   
 }
-
-/* .gif{
-  max-height: 200px;
-} */
-
-.banner-container{
-  display:flex;
-  width: 100vw;
-}
-
 .cta-button {
   height: 45px;
   border: 0;
@@ -98,12 +87,12 @@ button:disabled {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: absolute; */
+  position: absolute;
   bottom: 0 px;
   width: 100%;
   bottom: 0;
   left: 0;
-  padding-bottom: 5px;
+  padding-bottom: 20px;
 }
 
 .twitter-logo {
@@ -114,7 +103,7 @@ button:disabled {
 .footer-text {
   font-size: 16px;
   font-weight: bold;
-  color: black;
+  color: white;
 }
 
 .connected-container input[type='text'] {
