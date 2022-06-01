@@ -1,29 +1,15 @@
-# Buy Becca's Veggies Recipes using Solana Pay
+# buildspace Store on Solana Pay Project
 
-## App Overview
+### **Welcome 👋**
 
-This app was designed to demonstrate the exchange of digital goods in a decentralized manner using Javascript, React, and Solana libraries. This app eliminates needs for middleman services that collect fees and data from daily users.
+To get started with this project, clone this repo and follow these commands:
 
-Users are able to connect their Web3 wallet to the site to purchase and download recipes on the Solana blockchain. 
+1. Run `npm install` at the root of your directory
+2. Run `npm run dev` to start the project
+3. Start coding!
 
-If the owner of the Solana store (in this case Becca's Veggies Wallet) is connected to the site, they have the ability to add new products to the product display mapped out. These products are directly uploaded to Web 3 storage and refrenced by CID.
+### What is the `.vscode` Folder?
+If you use VSCode to build your app, we included a list of suggested extensions that will help you build this project! Once you open this project in VSCode, you will see a popup asking if you want to download the recommended extensions :).
 
-
-## App Visual
-
-<img src="public/liveSite.gif" alt="live site demo"/> 
-
-## Deployed Link
-
-https://buy-recipes-with-solana-pay.vercel.app/
-
-
-## Repositories and Links
-
-https://github.com/amackenzie26/Animates
-https://github.com/maweiche/solana-pay-solution
-
-## Authors
-
-* Matt Weichel [https://www.linkedin.com/in/mattweichel/]
-
+### **Questions?**
+Have some questions make sure you head over to your [buildspace Dashboard](https://app.buildspace.so/) and link your Discord account so you can get access to helpful channels teaching assistants, and your instructor!
