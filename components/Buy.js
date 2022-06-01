@@ -4,7 +4,8 @@ import { findReference, FindReferenceError } from "@solana/pay";
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import { InfinitySpin } from "react-loader-spinner";
 import IPFSDownload from "./IpfsDownload";
-import { addOrder, hasPurchased, fetchItem } from "../lib/api";
+import { fetchItem, addOrder } from "../lib/api";
+import { hasPurchased } from "../services/index";
 
 const STATUS = {
   Initial: "Initial",

@@ -9,10 +9,13 @@ import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 // Constants
 const BLOG_LINK = `https://rebeccaandmatt.com`;
 const FOODBLOG_LINK = `https://rebeccacoady.com`;
+export const GRAPHCMS_TOKEN = process.env.NEXT_PUBLIC_GRAPHCMS_TOKEN;
+export const WEB3STORAGE_TOKEN = process.env.NEXT_PUBLIC_WEB3STORAGE_TOKEN;
 
 const App = () => {
   const { publicKey } = useWallet();
   const isOwner = ( publicKey ? publicKey.toString() === process.env.NEXT_PUBLIC_OWNER_PUBLIC_KEY : false );
+  
   const [creating, setCreating] = useState(false);
   const [products, setProducts] = useState([]);
   
