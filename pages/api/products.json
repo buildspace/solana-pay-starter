@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Chocolate Chip & Pumpkin Muffins",
+    "price": "1",
+    "image_url": "https://www.rebeccacoady.com/wp-content/uploads/2019/08/DSC_1431_edited-1-e1634322832920.jpg",
+    "description": "40 minutes to make",
+    "filename": "pumpkinMuffinRecipe.png",
+    "hash": "bafybeiatgfdr3fcxnhznqlhgynord3hikw4yju45ox5kr4gsimre7x6smu"
+  },
+  {
+    "id": 2,
+    "name": "Impossible Pasta Sauce",
+    "price": "1",
+    "image_url": "https://www.rebeccacoady.com/wp-content/uploads/2021/03/IMG_4451-scaled.jpeg",
+    "description": "35 minutes to make",
+    "filename": "pastaSauceRecipe.png",
+    "hash": "bafybeid7ox5uotamb32t422qqnx4qqmj5ujrphacdhczlcjetq5v2pyyxu"
+  },
+  {
+    "id": 3,
+    "name": "Creamy Potato & Spinach Soup",
+    "price": "1",
+    "image_url": "https://www.rebeccacoady.com/wp-content/uploads/2021/03/FullSizeRender-2-1.jpeg",
+    "description": "45 min to make",
+    "filename": "spinachSoupRecipe.png",
+    "hash": "bafybeibwywo4bddpifllpnft4acggzxdqv4jbnv266giy4esj22tdy77um"
+  },
+  {
+    "id": 4,
+    "name": "Impossible Meatballs and ",
+    "price": "1",
+    "image_url": "https://www.rebeccacoady.com/wp-content/uploads/2021/04/DSC_0533.jpeg",
+    "description": "1 hr to make",
+    "filename": "meatballRecipe.png",
+    "hash": "bafybeigv4zzitaywsr3dxfptk5psr43s7h5wdcayhlpwqdn6fwrnmxyrhi"
+  }
+]

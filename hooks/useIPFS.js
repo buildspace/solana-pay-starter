@@ -1,10 +1,13 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
-=======
->>>>>>> fe464ae96c99ef068db6c271b78f2cd30d8e8f2b
 const useIPFS = (hash, filename) => {
-    return `https://ipfs.io/ipfs/${hash}/${filename}`
+  const [file, setFile] = useState(null);
+
+  useEffect(() => {
+    setFile(`https://ipfs.io/ipfs/${hash}/${filename}`);
+  }, []);
+
+  return file;
 };
 
 export default useIPFS;

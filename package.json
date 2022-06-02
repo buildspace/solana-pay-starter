@@ -42,17 +42,5 @@
     "parcel": "^2.3.1",
     "prettier": "^2.5.1",
     "shx": "^0.3.3"
-<<<<<<< HEAD
-  },
-  "browser": {
-    "fs": false,
-    "path": false,
-    "os": false
-  },
-  "node": {
-    "fs": "empty"
- }
-=======
   }
->>>>>>> fe464ae96c99ef068db6c271b78f2cd30d8e8f2b
 }

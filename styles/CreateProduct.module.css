@@ -1,0 +1,136 @@
+.background_blur{
+  background-image: url(../public/blur-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.create_product_container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px; /* Negative half of height. */
+  margin-left: -250px; /* Negative half of width. */
+  justify-content: center;
+  align-items: center;
+}
+
+.create_product_form {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  width: 99%;
+  background-color: white;
+  color: black;
+  transition: 0.3s;
+  margin: 10px 0;
+  align-self: flex-start;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.button:hover {
+  background-image: url(../public/blur-bg.png);
+  color: white;
+  -webkit-animation: bg-pan-left 2s linear infinite alternate both;
+  animation: bg-pan-left 2s ease-in-out infinite alternate both;
+}
+
+.header {
+  text-align: center;
+  background-image: url(../public/blur-bg.png);
+  padding: 0 150px;
+  border-radius: 10px 10px 0 0;
+}
+
+.form_container {
+  background-color: #141414;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  background-color: rgb(46, 46, 46);
+  border: none;
+  font-size: 1.1rem;
+  padding: 15px;
+  border-radius: 7px;
+  color: white;
+  outline: none;
+  box-sizing: border-box;
+  margin: 10px 0;
+  width: 48%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.input[type="file"] {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  cursor: pointer;
+}
+
+.input[type="file"]::before {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "Click to Upload Files";
+  height: 100%;
+  box-sizing: content-box;
+  font-weight: 500;
+}
+
+.input[type="file"]::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.flex_row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input[type="url"] {
+  width: 100%;
+}
+
+.flex_full_row{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text_area {
+  width: 100%;
+  min-height: 100px;
+  resize: none;
+  background-color: rgb(46, 46, 46);
+  border: none;
+  font-size: 1.1rem;
+  padding: 15px;
+  border-radius: 7px;
+  color: white;
+  outline: none;
+  box-sizing: border-box;
+  margin: 10px 0;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
