@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { Keypair, Transaction } from "@solana/web3.js";
 import { findReference, FindReferenceError } from "@solana/pay";
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
-import { InfinitySpin } from "react-loader-spinner";
+import { ThreeDots } from "react-loader-spinner";
 import IPFSDownload from "./IpfsDownload";
 import { addOrder, fetchItem, hasPurchased } from "../lib/api";
 
@@ -117,7 +117,7 @@ export default function Buy({ itemID }) {
       </div>
     );
   } else if (loading || (status === STATUS.Paid && !item)) {
-    return <InfinitySpin color="gray" />;
+    return <ThreeDots color="#4664ff" height={45} width={80} />;
   } else {
     return (
       <div>

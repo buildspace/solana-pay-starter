@@ -5,9 +5,8 @@ export default function handler(req, res) {
   if (req.method === "GET") {
     // Create a copy of products without the hashes and filenames
     const productsNoHashes = products.map((product) => {
-
       const { hash, filename, ...rest } = product;
-      return (hash && filename) ? rest : null;
+      return (hash && filename) ? rest : "";
     });
 
     res.status(200).json(productsNoHashes);  

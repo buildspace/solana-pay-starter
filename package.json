@@ -36,7 +36,7 @@
     "next": "^12.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-loader-spinner": "^6.0.0-0",
+    "react-loader-spinner": "^5.1.5",
     "web3.storage": "^4.2.0"
   },
   "devDependencies": {

@@ -16,10 +16,10 @@ const CreateProduct = () => {
   const [uploading, setUploading] = useState(false);
   const [uploaded, setUploaded] = useState(false);
 
-//   USE FOR TESTING
-//   function sleep(ms) {
-//     return new Promise(resolve => setTimeout(resolve, ms));
-//  }
+  //   USE FOR TESTING
+  //   function sleep(ms) {
+  //     return new Promise(resolve => setTimeout(resolve, ms));
+  //  }
 
   async function onChange(e) {
     setUploaded(false);

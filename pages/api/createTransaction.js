@@ -17,9 +17,9 @@ const sellerAddress = process.env.NEXT_PUBLIC_OWNER_PUBLIC_KEY;
 const sellerPublicKey = new PublicKey(sellerAddress);
 console.log(process.env.NEXT_PUBLIC_SOLANA_NETWORK);
 const network = process.env.NEXT_PUBLIC_SOLANA_NETWORK == "DEVNET"
- ? WalletAdapterNetwork.Devnet : WalletAdapterNetwork.Mainnet;  
+  ? WalletAdapterNetwork.Devnet : WalletAdapterNetwork.Mainnet;  
 const usdcAddress = new PublicKey((network == WalletAdapterNetwork.Devnet)
- ? "Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr" : "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v");
+  ? "Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr" : "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v");
 
 const createTransaction = async (req, res) => {
   try {
