@@ -21,6 +21,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nfteyez/sol-rayz": "^0.10.2",
     "@solana/pay": "^0.2.0",
     "@solana/wallet-adapter-base": "^0.9.4",
     "@solana/wallet-adapter-react": "^0.15.3",

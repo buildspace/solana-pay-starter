@@ -44,8 +44,8 @@ export const hasPurchased = async (publicKey, itemID) => {
   const result = await request(graphqlAPI, query, { buyer }, itemID);
   
   if (result.orders.length > 0 && result.orders[0].itemID.includes(itemID))  { 
-      console.log("currnt wallets orders are: ", result.orders[0].itemID);
-      console.log("order is: ", itemID);
+      
+      // console.log("order is: ", itemID);
       return true; 
     }
   return false;
