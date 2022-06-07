@@ -1,0 +1,33 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@next/next/recommended",
+        "eslint:recommended", "next"
+    ],
+    "rules": {
+        "react/prop-types": 0,
+        "indent": ["error", 2],
+        "linebreak-style": 1,
+        "quotes": ["error", "double"],
+        "semi": ["error", "always"]
+    },
+    "plugins": ["react"],
+    "parserOptions": {
+        "ecmaVersion": 2021,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "env": {
+        "es2021": true,
+        "browser": true,
+        "node": true
+    },
+    "settings": {
+        "react": {
+           "version": "detect"
+        }
+    }
+}

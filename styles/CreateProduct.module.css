@@ -92,10 +92,45 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  content: "Click to Upload Files";
+  content: "Click to Upload File";
   height: 100%;
   box-sizing: content-box;
   font-weight: 500;
+}
+
+.input[type="file"]:disabled::before {
+  color: silver;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "Uploading ...";
+  height: 100%;
+  box-sizing: content-box;
+  font-weight: 500;
+  cursor: default;
+}
+
+.input[type="file"]:required::before {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "";
+  height: 100%;
+  box-sizing: content-box;
+  font-weight: 500;
+  cursor: default;
+}
+
+.input[type="file"]:required {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-weight: 500;
+  cursor: default;
+  padding: 26px 100px 26px 100px;
 }
 
 .input[type="file"]::-webkit-file-upload-button {

@@ -18,7 +18,10 @@
     "dev": "next dev",
     "build": "yarn clean && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "eslint": "eslint \"src/**/*.{js,jsx}\"",
+    "eslint:fix": "eslint \"src/**/*.{js,jsx}\" --fix"
   },
   "dependencies": {
     "@solana/pay": "^0.2.0",
@@ -37,6 +40,10 @@
     "react-loader-spinner": "^6.0.0-0"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^12.1.6",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.30.0",
     "parcel": "^2.3.1",
     "prettier": "^2.5.1",
     "shx": "^0.3.3"
