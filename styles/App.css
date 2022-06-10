@@ -127,6 +127,7 @@ button:disabled {
   border: none;
   background-color: #4664ff;
   color: #fff;
+  height: 45px;
   font-size: 16px;
   border-radius: 3px;
   padding: 8px 16px;
@@ -137,9 +138,10 @@ button:disabled {
   border: none;
   background-color: #4664ff;
   color: #fff;
+  height: 45px;
   font-size: 16px;
   border-radius: 3px;
-  padding: 8px 16px;
+  padding: 13px 16px;
   cursor: pointer;
 }
 
