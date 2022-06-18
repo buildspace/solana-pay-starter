@@ -27,6 +27,8 @@
     "@solana/wallet-adapter-react-ui": "^0.9.5",
     "@solana/wallet-adapter-wallets": "^0.16.0",
     "@solana/web3.js": "^1.36.0",
+    "@splinetool/react-spline": "^2.2.1",
+    "@splinetool/runtime": "^0.9.69",
     "bignumber.js": "^9.0.2",
     "crypto-js": "^4.1.1",
     "ipfs-core": "^0.14.3",

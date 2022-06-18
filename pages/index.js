@@ -5,13 +5,17 @@ import Product from "../components/Product";
 import HeadComponent from '../components/Head';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
+import Spline from '@splinetool/react-spline';
 
-//index-js
+
+const SPLINE_SCENE = `https://prod.spline.design/lwFGUGO5nCfnnDQU/scene.splinecode`;
+
 const App = () => {
   const { publicKey } = useWallet();
   const isOwner = ( publicKey ? publicKey.toString() === process.env.NEXT_PUBLIC_OWNER_PUBLIC_KEY : false );
   const [creating, setCreating] = useState(false);
   const [products, setProducts] = useState([]);
+
   const renderNotConnectedContainer = () => (
     <div style={{ display:'flex', justifyContent:'center' }}>
       <div className="card bg-blur">
@@ -51,18 +55,18 @@ const App = () => {
       <div className="container">
         <header className="header-container">
           <p className="header">DarkMoon🌑Market</p>
-          {isOwner && (
-            <button className="cta-button connect-wallet-button" onClick={() => setCreating(!creating)}>
-              {creating ? "Close" : "Create Product"}
-            </button>
-          )}
-          {publicKey ? renderItemBuyContainer() : renderNotConnectedContainer()}
+          
         </header>
-        <main>
-        <div lassName="row">
+        <Spline scene={SPLINE_SCENE} />
+        <div className="middle">
+        {publicKey ? renderItemBuyContainer() : renderNotConnectedContainer()}
         {creating && <CreateProduct />}
         </div>
-        </main>
+        <div className="middle-row">
+        {isOwner && (<button className="cta-button connect-wallet-button" onClick={() => setCreating(!creating)}>
+          {creating ? "Close" : "Create Product"}
+        </button>)}
+        </div>
         <Footer/>
       </div>
     </div>
