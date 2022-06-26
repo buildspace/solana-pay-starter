@@ -65,7 +65,7 @@ export default function Buy({ itemID }) {
       const purchased = await hasPurchased(publicKey, itemID);
       if (purchased) {
         setStatus(STATUS.Paid);
-        console.log("Address has already purchased this item!");
+        console.log( `${publicKey} has already purchased this item!`);
       }
     }
     checkPurchased();

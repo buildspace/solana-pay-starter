@@ -10,10 +10,16 @@ currently being supported with security updates.
 | 0.1.x   | :white_check_mark: |
 
 
+# Reported Issues
+Unsupported Engine 
+    package: `react-loader-spinner@6.0.0-0`
+    required: `npm: 'please-use-yarn', yarn: '>= 1.19.1'`
+    current: `node: 'v16.13.1', npm: '8.1.2'`
+
+Deprecated 
+    har-validator@5.1.5: `this library is no longer supported`
+    uuid@3.4.0: `Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.`
+    request@2.88.2: `request has been deprecated, see https://github.com/request/request/issues/3142` 
+
 ## Reporting a Vulnerability
-
-Use this section to tell people how to report a vulnerability.
-
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Please submit Vulns to our Jira project:
