@@ -1,0 +1,20 @@
+{
+    "name": "DARKMOON XBOW",
+    "symbol": "DMXB",
+    "image": "2.gif",
+    "properties": {
+      "files": [
+        {
+          "uri": "2.png",
+          "type": "image/gif"
+        }
+      ],
+      "creators": [
+        {
+          "address": "D634DffotYWawXWqwHmvWksirFYY7qQ1oRQohL7LCbTV",
+          "share": 100
+        }
+      ]
+    },
+    "collection": { "name": "DARKMOON ARMORY", "family": "DARKMOON" }
+  }
