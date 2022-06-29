@@ -6,6 +6,7 @@ import HeadComponent from '../components/Head';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import Spline from '@splinetool/react-spline';
+import Link from 'next/link';
 
 
 const SPLINE_SCENE = `https://prod.spline.design/lwFGUGO5nCfnnDQU/scene.splinecode`;
@@ -55,17 +56,17 @@ const App = () => {
       <div className="container">
         <header className="header-container">
           <p className="header">DarkMoon🌑Market</p>
-          
+          <header className="header-right">
+          {isOwner && (<button className="cta-button connect-wallet-button" onClick={() => setCreating(!creating)}>{creating ? "Close" : "Create Product"}</button>)}
+          <button className="cta-button connect-wallet-button">
+                <Link href="/mint"><a>MINTING</a></Link>
+            </button>
+            </header>
         </header>
         <Spline scene={SPLINE_SCENE} />
         <div className="middle">
         {publicKey ? renderItemBuyContainer() : renderNotConnectedContainer()}
         {creating && <CreateProduct />}
-        </div>
-        <div className="middle-row">
-        {isOwner && (<button className="cta-button connect-wallet-button" onClick={() => setCreating(!creating)}>
-          {creating ? "Close" : "Create Product"}
-        </button>)}
         </div>
         <Footer/>
       </div>

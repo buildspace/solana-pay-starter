@@ -17,7 +17,7 @@ export default function Buy({ itemID }) {
   const { connection } = useConnection();
   const { publicKey, sendTransaction } = useWallet();
   const orderID = useMemo(() => Keypair.generate().publicKey, []); // Public key used to identify the order
-
+  const isOwner = ( publicKey ? publicKey.toString() === process.env.NEXT_PUBLIC_OWNER_PUBLIC_KEY : false );
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState(STATUS.Initial); // Tracking transaction status
 

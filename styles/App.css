@@ -42,6 +42,35 @@
   left: 0;
 }
 
+.header-left {
+  margin: 0;
+  font-size: 50px;
+  font-weight: bold;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  position: absolute;
+  color: white;
+  top: 25 px;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.header-right {
+  margin: 0;
+  font-size: 50px;
+  font-weight: bold;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  position: absolute;
+  color: white;
+  top: 0 px;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
 .middle {
   margin: 0;
   font-weight: bold;

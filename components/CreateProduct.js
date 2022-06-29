@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { create } from "ipfs-http-client";
 import styles from "../styles/CreateProduct.module.css";
+import Link from 'next/link';
 
 const client = create("https://ipfs.infura.io:5001/api/v0");
 
@@ -115,6 +116,11 @@ const CreateProduct = () => {
               disabled={uploading}
             >
               Create Product
+            </button>
+            <button className="secondary">
+            <Link href="/">
+                  <h3> CANCEL </h3>
+                </Link>  
             </button>
           </div>
         </div>
