@@ -13,7 +13,7 @@ const SPLINE_SCENE = `https://prod.spline.design/lwFGUGO5nCfnnDQU/scene.splineco
 
 const App = () => {
   const { publicKey } = useWallet();
-  const isOwner = ( publicKey ? publicKey.toString() === process.env.NEXT_PUBLIC_OWNER_PUBLIC_KEY : false );
+  const isOwner = ( publicKey ? publicKey.toString() === process.env.NEXT_PUBLIC_OG_PUBLIC_KEY : false );
   const [creating, setCreating] = useState(false);
   const [products, setProducts] = useState([]);
 
@@ -57,7 +57,7 @@ const App = () => {
         <header className="header-container">
           <p className="header">DarkMoon🌑Market</p>
           <header className="header-right">
-          {isOwner && (<button className="cta-button connect-wallet-button" onClick={() => setCreating(!creating)}>{creating ? "Close" : "Create Product"}</button>)}
+          {isOwner && (<button className="cta-button admin-wallet-button" onClick={() => setCreating(!creating)}>{creating ? "Close" : "Create Product"}</button>)}
           <button className="cta-button connect-wallet-button">
                 <Link href="/mint"><a>MINTING</a></Link>
             </button>

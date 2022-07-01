@@ -5,25 +5,51 @@ import { useWallet } from '@solana/wallet-adapter-react';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import Spline from '@splinetool/react-spline';
 import Link from 'next/link';
+import '../../styles/CandyMachine.module.css';
+import CandyMachine from './Minter';
 
 const SPLINE_SCENE = `https://prod.spline.design/lwFGUGO5nCfnnDQU/scene.splinecode`;
 
 const MintPage = () => {
   const { publicKey } = useWallet();
   const isOwner = ( publicKey ? publicKey.toString() === process.env.NEXT_PUBLIC_OWNER_PUBLIC_KEY : false );
-  const [minting, setMinting] = useState(false);
+  const isHodlr = ( publicKey );
 
   const renderNotConnectedContainer = () => (
-    <div style={{ display:'flex', justifyContent:'center' }}>
-      <div className="card bg-blur">
       <div className="row" style={{ justifyContent:'center' }}>
         <div className="button-container">
+          <WalletMultiButton className="cta-button connect-wallet-button" />
+        </div>
+      </div>
+  );
+
+  const renderConnectedProfile = () => (
+    <div className="row" style={{ justifyContent:'center' }}>
+      <div className="button-container">
         <WalletMultiButton className="cta-button connect-wallet-button" />
       </div>
-      </div>
-     </div>
     </div>
-  );
+);
+
+  const renderHome = () => (
+  <div className="row" style={{ justifyContent:'center' }}>
+    <div className="button-container">
+      <button className="cta-button market-wallet-button">
+        <Link href="/"><a>MARKET</a></Link>
+      </button>
+    </div>
+  </div>
+);
+
+const renderAdminPanel = () => (
+  <div className="row" style={{ justifyContent:'center' }}>
+    <div className="button-container">
+    <button className="cta-button admin-wallet-button">
+      <Link href="/admin"><a>ADMIN</a></Link>
+    </button>
+  </div>
+  </div>
+);
 
   useEffect(() => {
     if (publicKey) {
@@ -31,7 +57,10 @@ const MintPage = () => {
   }, [publicKey]);
 
   const renderItemMintContainer = () => (
-    <div className="products-container">
+    <div className="middle-row">
+      {/* Check for publicKey and then pass in publicKey */}
+      {publicKey && <CandyMachine publicKey={window.solana} />}
+      {publicKey && <CandyMachine publicKey={window.solana} />}
     </div>
   );
 
@@ -41,20 +70,16 @@ const MintPage = () => {
       <div className="container">
         <header className="header-container">
             <p className="header">DarkMoon🌑Mint</p>
-            <header className="header-right">
-            <button className="cta-button connect-wallet-button">
-                    <Link href="/"><a>MARKET</a></Link>  
-            </button>
-        </header>
+              <header className="header-right">
+                {renderHome()}
+                {!publicKey && renderNotConnectedContainer()}
+                {publicKey && renderConnectedProfile()}
+                {isOwner && renderAdminPanel()}
+              </header>
         </header>
         <Spline scene={SPLINE_SCENE} />
         <div className="middle">
-        {publicKey ? renderItemMintContainer() : renderNotConnectedContainer()}
-        </div>
-        <div className="middle-row">
-        {isOwner && (<button className="cta-button connect-wallet-button" onClick={() => setMinting(!minting)}>
-          {minting ? "CANCEL" : "MINT"}
-        </button>)}
+         {renderItemMintContainer()}
         </div>
         <Footer/>
       </div>

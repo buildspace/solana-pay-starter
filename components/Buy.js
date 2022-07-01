@@ -17,7 +17,7 @@ export default function Buy({ itemID }) {
   const { connection } = useConnection();
   const { publicKey, sendTransaction } = useWallet();
   const orderID = useMemo(() => Keypair.generate().publicKey, []); // Public key used to identify the order
-  const isOwner = ( publicKey ? publicKey.toString() === process.env.NEXT_PUBLIC_OWNER_PUBLIC_KEY : false );
+  const isOwner = ( publicKey ? publicKey.toString() === process.env.NEXT_PUBLIC_OG_PUBLIC_KEY : false );
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState(STATUS.Initial); // Tracking transaction status
 
@@ -66,6 +66,9 @@ export default function Buy({ itemID }) {
       if (purchased) {
         setStatus(STATUS.Paid);
         console.log( `${publicKey} has already purchased this item!`);
+      } else if (isOwner) {
+        setStatus(STATUS.Paid);
+        console.log( `${publicKey} created this item!`);
       }
     }
     checkPurchased();

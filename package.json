@@ -21,6 +21,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@project-serum/anchor": "^0.25.0-beta.1",
     "@solana/pay": "^0.2.0",
     "@solana/wallet-adapter-base": "^0.9.4",
     "@solana/wallet-adapter-react": "^0.15.3",

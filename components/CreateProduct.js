@@ -117,7 +117,7 @@ const CreateProduct = () => {
             >
               Create Product
             </button>
-            <button className="secondary">
+            <button className="admin-wallet-connect">
             <Link href="/">
                   <h3> CANCEL </h3>
                 </Link>  

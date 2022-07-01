@@ -140,8 +140,25 @@
   max-width: 300px;
 }
 
+.admin-wallet-button {
+  color: white;
+  background: -webkit-linear-gradient(left, #000000, #e23b35);
+  background-size: 200% 200%;
+  animation: gradient-animation 4s ease infinite;
+  max-width: 300px;
+}
+
 .mint-button {
-  background: -webkit-linear-gradient(left, #4e44ce, #35aee2);
+  color: white;
+  background: -webkit-linear-gradient(left, #a044ce, #35e241);
+  background-size: 200% 200%;
+  animation: gradient-animation 4s ease infinite;
+  margin-left: 10px;
+}
+
+.market-wallet-button {
+  color: white;
+  background: -webkit-linear-gradient(left, #a044ce, #dadada);
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
   margin-left: 10px;
