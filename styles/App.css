@@ -40,6 +40,10 @@
   width: 100%;
   top: 0;
   left: 0;
+  cursor:none;
+}
+.avoid-clicks {
+  pointer-events: none;
 }
 
 .header-left {
@@ -71,6 +75,7 @@
   top: 0;
   left: 0;
 }
+
 .middle {
   margin: 0;
   font-weight: bold;
@@ -148,9 +153,17 @@
   max-width: 300px;
 }
 
+.play-button {
+  color: white;
+  background: -webkit-linear-gradient(left, #ca8709, #001104);
+  background-size: 200% 200%;
+  animation: gradient-animation 4s ease infinite;
+  margin-left: 10px;
+}
+
 .mint-button {
   color: white;
-  background: -webkit-linear-gradient(left, #a044ce, #35e241);
+  background: -webkit-linear-gradient(left, #60c657, #001104);
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
   margin-left: 10px;
@@ -184,6 +197,35 @@ button:disabled {
   bottom: 0;
   left: 0;
   padding-bottom: 20px;
+}
+
+.footer-left {
+  margin: 0;
+  font-size: 50px;
+  font-weight: bold;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  position: absolute;
+  color: white;
+  top: 95%;
+  width: 100%;
+  left: 0;
+}
+
+.footer-right {
+  margin: 0;
+  font-size: 50px;
+  font-weight: bold;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  position: absolute;
+  color: white;
+  bottom: 0 px;
+  top: 80%;
+  width: 100%;
+  right: 0;
 }
 
 .twitter-logo {

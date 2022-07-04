@@ -5,6 +5,7 @@ import { useConnection, useWallet } from '@solana/wallet-adapter-react';
 import { InfinitySpin } from 'react-loader-spinner';
 import IPFSDownload from './IpfsDownload';
 import { addOrder, hasPurchased } from '../lib/api';
+import Link from 'next/link';
 
 //buyjs
 const STATUS = {
@@ -122,18 +123,30 @@ export default function Buy({ itemID }) {
   return (
     <div>
       {status === STATUS.Paid ? (
+        <div>
         <IPFSDownload 
           filename="ALIEN.jpg"
           hash="Qmcc9nvGwaYfPHZRqB3EbCudqbTc5Z5e15hSwyVAoKXa9V"
           cta="Download alien"
         />
+        <div className="header">
+            <button className="cta-button mint-button" disabled="true">
+              <a>MINT SHIP</a>
+            </button>
+            <button className="cta-button play-button" disabled={loading}>
+            <Link href="/play">
+              <a>PLAY ALPHA🌑</a>
+              </Link>
+            </button>
+        </div>
+      </div>
       ) : (
         <button
           disabled={loading}
           className="buy-button"
           onClick={processTransaction}
         >
-          Buy now 🤑
+          BUY 🤑
         </button>
       )}
     </div>

@@ -30,7 +30,7 @@ const CandyMachine = ({ publicKey }) => {
     const rpcHost = process.env.NEXT_PUBLIC_SOLANA_RPC_HOST;
     const connection = new Connection(rpcHost);
 
-    const provider = new anchor.Provider (
+    const provider = new Provider (
       connection,
       window.solana,
       opts.preflightCommitment

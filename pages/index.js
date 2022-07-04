@@ -8,7 +8,6 @@ import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import Spline from '@splinetool/react-spline';
 import Link from 'next/link';
 
-
 const SPLINE_SCENE = `https://prod.spline.design/lwFGUGO5nCfnnDQU/scene.splinecode`;
 
 const App = () => {
@@ -40,6 +39,30 @@ const App = () => {
     }
   }, [publicKey]);
 
+  const renderConnectedProfile = () => (
+    <div className="row" style={{ justifyContent:'center' }}>
+      <div className="button-container">
+        <WalletMultiButton className="cta-button connect-wallet-button" />
+      </div>
+      <button className="cta-button play-button">
+        <Link href="/about"><a>ABOUT</a></Link>
+      </button>
+    </div>
+  );
+
+  const renderAdminPanel = () => (
+    <div className="row" style={{ justifyContent:'center' }}>
+      <div className="button-container">
+      <button className="cta-button admin-wallet-button">
+        <Link href="/admin"><a>ADMIN</a></Link>
+      </button>
+      <button className="cta-button play-button">
+        <Link href="/play"><a>PLAY🌑</a></Link>
+      </button>
+    </div>
+    </div>
+  );
+
   const renderItemBuyContainer = () => (
     <div className="products-container">
       {products.map((product) => (
@@ -51,26 +74,28 @@ const App = () => {
   );
 
   return (
-    <div className="App">
-      <HeadComponent/>
-      <div className="container">
+  <div className="App">
+    <HeadComponent/>
+    <div className="container">
         <header className="header-container">
-          <p className="header">DarkMoon🌑Market</p>
-          <header className="header-right">
-          {isOwner && (<button className="cta-button admin-wallet-button" onClick={() => setCreating(!creating)}>{creating ? "Close" : "Create Product"}</button>)}
-          <button className="cta-button connect-wallet-button">
-                <Link href="/mint"><a>MINTING</a></Link>
-            </button>
-            </header>
+            <p className="header">DarkMoon🌑Market</p>
+              <header className="header-right">
+                {isOwner && renderAdminPanel()}
+                {publicKey ? renderConnectedProfile() : <></>}
+              </header>
         </header>
         <Spline scene={SPLINE_SCENE} />
         <div className="middle">
-        {publicKey ? renderItemBuyContainer() : renderNotConnectedContainer()}
-        {creating && <CreateProduct />}
+            {publicKey ? renderItemBuyContainer() : renderNotConnectedContainer()}
+            {creating && <CreateProduct />}
         </div>
+          <div className="middle-row">
+            <p>Minting is currently paused - contract in development!</p>
+            {isOwner && (<button className="cta-button admin-wallet-button" onClick={() => setCreating(!creating)}>{creating ? "Close" : "Add Product"}</button>)}
+          </div>
         <Footer/>
       </div>
-    </div>
+      </div>
   );
 };
 

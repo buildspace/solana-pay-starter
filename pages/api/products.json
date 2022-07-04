@@ -3,17 +3,17 @@
     "id": 1,
     "name": "NLAB-S1",
     "price": "10",
-    "description": "A treasured piece of art. A quick proof of concept Non-fungible token for Solana.",
+    "description": "A treasured piece of art you can download and grants Supporter role & alpha access.",
     "image_url": "https://gateway.pinata.cloud/ipfs/Qmcc9nvGwaYfPHZRqB3EbCudqbTc5Z5e15hSwyVAoKXa9V",
     "filename": "ALIEN.jpg",
     "hash": "Qmcc9nvGwaYfPHZRqB3EbCudqbTc5Z5e15hSwyVAoKXa9V"
   },
   {
     "id": 2,
-    "name": "NITSUAH-PASS",
+    "name": "PASS-S1",
     "price": "1",
     "image_url": "https://gateway.pinata.cloud/ipfs/QmNTYoBTUVhMaRZtMiLTvZquLt81GZGQjtjaTFn19nS8vU",
-    "description": "NITSUAH - Concepts of Proof on Solana",
+    "description": "This NitsuahLabs pass grants basic User role & beta access.",
     "filename": "NITSUAH.png",
     "hash": "QmNTYoBTUVhMaRZtMiLTvZquLt81GZGQjtjaTFn19nS8vU"
   }
