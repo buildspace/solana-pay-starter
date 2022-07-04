@@ -57,8 +57,7 @@ const renderAdminPanel = () => (
 
   const renderItemMintContainer = () => (
     <div className="middle-row">
-      {/* Check for publicKey and then pass in publicKey */}
-      {publicKey && <CandyMachine publicKey={window.solana} />}
+      <h2>Minting is currently disabled!</h2>
     </div>
   );
 

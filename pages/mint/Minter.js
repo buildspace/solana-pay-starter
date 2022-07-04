@@ -1,9 +1,9 @@
 import React, { useState, useEffect} from "react";
+import '../../styles/CandyMachine.module.css';
 import { Connection, PublicKey } from '@solana/web3.js';
 import { Program, Provider, web3 } from '@project-serum/anchor';
 import { MintLayout, TOKEN_PROGRAM_ID, Token } from '@solana/spl-token';
-import { sendTransactions } from './connection';
-import '../../styles/CandyMachine.module.css';
+import { sendTransactions } from '../api/connection';
 import {
   candyMachineProgram,
   TOKEN_METADATA_PROGRAM_ID,
@@ -12,7 +12,7 @@ import {
   getNetworkExpire,
   getNetworkToken,
   CIVIC
-} from './helpers';
+} from '../api/helpers';
 
 const { SystemProgram } = web3;
 const opts = {
@@ -21,6 +21,7 @@ const opts = {
 
 const CandyMachine = ({ publicKey }) => {
   const [candyMachine, setCandyMachine] = useState(null);
+  const [provider, setProvider] = useState(null);
 
   useEffect(() => {
     getCandyMachineState();
