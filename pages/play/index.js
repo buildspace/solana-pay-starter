@@ -19,7 +19,7 @@ const STATUS = {
 const GamePage = () => {
   const { publicKey } = useWallet();
   const user = useWallet().toString();
-  const isOwner = ( publicKey ? user === process.env.NEXT_PUBLIC_OWNER_PUBLIC_KEY : false );
+  const isOwner = ( publicKey ? user.toString() === process.env.NEXT_PUBLIC_OWNER_PUBLIC_KEY : false );
   // const isHodlr = ( publicKey );
   const [status, setStatus] = useState(STATUS.Initial); // Tracking transaction status
   const [loading, setLoading] = useState(false);
@@ -82,8 +82,8 @@ const renderAdminPanel = () => (
     }, [publicKey, itemID]);
 
   const renderGameContainer = () => (
-    <div className="middle-row">
-      {publicKey ? <Lobby/> : renderHome() }
+    <div className="App">
+      {publicKey ? <Lobby/> : <div className="middle-row">{renderNotConnectedContainer()}<p>You are logged out</p>{renderHome()}</div> }
     </div>
   );
 
@@ -96,25 +96,30 @@ const renderAdminPanel = () => (
 
     <div className="App">
       <div className="container">
-        <header className="header-container">
-            <p className="header">DarkMoon🌑Play</p>
+        <header className="header">
+            <p className="header-left">🌑PLAY</p>
             <header className="header-right">
                 {isOwner && renderAdminPanel()}
                 {publicKey ? renderConnectedProfile() : renderNotConnectedContainer()}
               </header>
         </header>
-        <Spline scene={SPLINE_SCENE} />
+        
         
       {status === STATUS.Paid ? (
         <>
         {renderGameContainer()}
         </>
       ) : (
+        <>
+        <header className="header-container">
+        </header>
+        <Spline scene={SPLINE_SCENE} />
         <div className="middle-row">
         <p>You should make a donation first!</p>
           {renderHome()}
         <p>Mint donation contract is being built!</p>
         </div>
+        </>
       )}
         <Footer/>
       </div>

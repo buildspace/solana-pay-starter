@@ -15,8 +15,8 @@ const AboutPage = () => {
       <button className="cta-button market-wallet-button">
         <Link href="/"><a>MARKET</a></Link>
       </button>
-      <button className="cta-button market-wallet-button">
-        <Link href="/mint"><a>MINT</a></Link>
+      <button className="cta-button market-wallet-button" disabled="true">
+        <a>MINT</a>
       </button>
     </div>
   </div>

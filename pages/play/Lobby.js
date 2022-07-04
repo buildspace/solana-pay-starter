@@ -3,20 +3,14 @@ import styles from "../../styles/Game.module.css";
 
 const Lobby = () => {
 
-  const loadGame = () => {
-    console.log("Loading game!")
+  const logOut = () => {
+    console.log("Logging out game!");
   }
 
   return (
-    <div className="App">
-      <div className={styles.game_sesh_container}>
-        <div className={styles.game_sesh_form}>
-          <header className={styles.header}>
-            <h2>Welcome Space Cadet!</h2>
+          <header className="middle">
+            <h2>GAME GOES HERE!</h2>
           </header>
-          </div>
-        </div>
-      </div>
   );
 };
 

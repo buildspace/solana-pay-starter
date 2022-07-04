@@ -63,8 +63,8 @@ const renderAdminPanel = () => (
     <div className="middle-row">
       {publicKey ? <><p>Welcome Admins!</p>
             <button className="cta-button play-button">
-            <Link href="/mint">
-              <a>PLAY</a>
+            <Link href="/play">
+            <a>PLAY ALPHA🌑</a>
               </Link>
             </button>
         </> : renderHome() }
