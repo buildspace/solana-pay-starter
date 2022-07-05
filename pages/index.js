@@ -8,7 +8,7 @@ import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import Spline from '@splinetool/react-spline';
 import Link from 'next/link';
 
-const SPLINE_SCENE = `https://prod.spline.design/lwFGUGO5nCfnnDQU/scene.splinecode`;
+const SPLINE_SCENE = 'https://prod.spline.design/lwFGUGO5nCfnnDQU/scene.splinecode';
 
 const App = () => {
   const { publicKey } = useWallet();
@@ -30,7 +30,7 @@ const App = () => {
 
   useEffect(() => {
     if (publicKey) {
-      fetch(`/api/fetchProducts`)
+      fetch('/api/fetchProducts')
         .then(response => response.json())
         .then(data => {
           setProducts(data);

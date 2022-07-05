@@ -8,7 +8,7 @@ import Link from 'next/link';
 import '../../styles/CandyMachine.module.css';
 import CandyMachine from './Minter';
 
-const SPLINE_SCENE = `https://prod.spline.design/lwFGUGO5nCfnnDQU/scene.splinecode`;
+const SPLINE_SCENE = 'https://prod.spline.design/lwFGUGO5nCfnnDQU/scene.splinecode';
 
 const MintPage = () => {
   const  { publicKey } = useWallet();

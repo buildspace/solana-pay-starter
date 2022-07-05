@@ -5,7 +5,7 @@ import Footer from '../../components/footer';
 import Spline from '@splinetool/react-spline';
 import Link from 'next/link';
 
-const SPLINE_SCENE = `https://prod.spline.design/lwFGUGO5nCfnnDQU/scene.splinecode`;
+const SPLINE_SCENE = 'https://prod.spline.design/lwFGUGO5nCfnnDQU/scene.splinecode';
 
 const AboutPage = () => {
 
