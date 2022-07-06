@@ -40,8 +40,11 @@
     "react-loader-spinner": "^6.0.0-0"
   },
   "devDependencies": {
+    "@react-three/drei": "^7.20.5",
+    "@react-three/fiber": "^7.0.19",
     "parcel": "^2.3.1",
     "prettier": "^2.5.1",
-    "shx": "^0.3.3"
+    "shx": "^0.3.3",
+    "three": "^0.134.0"
   }
 }

@@ -1,5 +1,6 @@
 # DarkMoon Dev
 ### **Welcome Space Cadet 👋**
+[Building my Own Game ](https://nft.darkmoon.dev/play)
 
 # Market
 To get started with this project, clone this repo, create a new branch like `ajh-dev` and follow these commands:
@@ -8,6 +9,11 @@ To get started with this project, clone this repo, create a new branch like `ajh
 2. Run `npm run dev` to start the project
 3. Watch it run! `http://localhost:3000/`
 
-# buildspace 
-[Store on Solana Pay Project](https://buildspace.so/p/build-solana-pay-store/)
-[Building my Own Game ](https://nft.darkmoon.dev/play)
+# Works Cited 💻
+[Buildspace - Store on Solana Pay Project](https://buildspace.so/p/build-solana-pay-store/)
+[THREEJS.Multiplayer - React three fiber, socket.io multiplayer](https://github.com/juniorxsound/R3F.Multiplayer)
+
+<div align="center">
+<img src="https://i.imgur.com/hqehLwp.gif" /><br/>
+<img src="https://github.com/Nitsuah-Labs/darkmoon/workflows/CI/badge.svg" /><br/>
+</div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect} from 'react';
 import Footer from '../components/footer';
 import CreateProduct from "../components/CreateProduct";
 import Product from "../components/Product";

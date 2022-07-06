@@ -4,7 +4,7 @@ import { useWallet } from '@solana/wallet-adapter-react';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import { InfinitySpin } from 'react-loader-spinner';
 import { hasPurchased } from '../../lib/api';
-import Lobby from "./Lobby";
+import Lobby from "./game/Lobby.js";
 import Spline from '@splinetool/react-spline';
 import Link from 'next/link';
 
@@ -92,12 +92,10 @@ const renderAdminPanel = () => (
   }
 
   return (
-    
-
     <div className="App">
       <div className="container">
         <header className="header">
-            <p className="header-left">🌑PLAY</p>
+            {/*<p className="header-left">🌑PLAY</p>*/}
             <header className="header-right">
                 {isOwner && renderAdminPanel()}
                 {publicKey ? renderConnectedProfile() : renderNotConnectedContainer()}
