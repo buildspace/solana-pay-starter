@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Canvas } from '@react-three/fiber'
+import { Canvas, MeshNormalMaterial, BoxBufferGeometry } from '@react-three/fiber'
 import { OrbitControls, Text, Stats } from '@react-three/drei'
-import { MeshNormalMaterial, BoxBufferGeometry } from '@react-three/fiber'
 import { io } from 'socket.io-client'
 import "../../../styles/Game.module.css";
 

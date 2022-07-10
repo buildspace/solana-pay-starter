@@ -1,8 +1,6 @@
 import fs from 'fs'
 import express from 'express'
 import Router from 'express-promise-router'
-import { createServer } from 'vite'
-import viteConfig from './vite.config.js'
 import { Server } from 'socket.io'
 
 // Create router
@@ -18,7 +16,7 @@ const vite = await createServer({
 })
 
 // Main route serves the index HTML
-router.get('/', async (req, res, next) => {
+router.get('/play/', async (req, res, next) => {
     let html = fs.readFileSync('index.html', 'utf-8')
     html = await vite.transformIndexHtml(req.url, html)
     res.send(html)

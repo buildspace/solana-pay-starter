@@ -36,8 +36,8 @@ const AboutPage = () => {
         <div className="middle-row">
                 <h2> About DarkMoon🌑Market</h2>
             <p>80% of proceeds go to open sourced + software used in this repo</p>
-            <p>Minting contract will disperse this automatically and remaining funds used for R+D</p>
-            <p>spline.design + enable3d + others!</p>
+            <p>Minting contract will be designed to disperse funds towards repos used in R+D</p>
+            <p>spline.design + enable3d + others! Lets support our developers in web3!</p>
         </div>
         <Footer/>
       </div>

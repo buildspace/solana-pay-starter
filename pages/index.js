@@ -90,9 +90,10 @@ const App = () => {
             {creating && <CreateProduct />}
         </div>
           <div className="middle-row">
-            <p>Minting is currently paused - contract in development!</p>
             {isOwner && (<button className="cta-button admin-wallet-button" onClick={() => setCreating(!creating)}>{creating ? "Close" : "Add Product"}</button>)}
+            <p>Minting is currently paused - contract in development!</p>
           </div>
+          
         <Footer/>
       </div>
       </div>
