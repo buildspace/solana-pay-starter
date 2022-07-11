@@ -14,7 +14,5 @@ To get started with this project, clone this repo, create a new branch like `ajh
 [THREEJS.Multiplayer - React three fiber, socket.io multiplayer](https://github.com/juniorxsound/R3F.Multiplayer)
 [Enable3D - coming soon!]()
 
-<div align="center">
 <img src="https://i.imgur.com/hqehLwp.gif" /><br/>
 <img src="https://github.com/Nitsuah-Labs/darkmoon/workflows/CI/badge.svg" /><br/>
-</div>
