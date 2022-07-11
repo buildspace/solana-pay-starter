@@ -22,6 +22,8 @@
   },
   "dependencies": {
     "@project-serum/anchor": "^0.25.0-beta.1",
+    "@react-three/drei": "^7.20.5",
+    "@react-three/fiber": "^7.0.19",
     "@solana/pay": "^0.2.0",
     "@solana/wallet-adapter-base": "^0.9.4",
     "@solana/wallet-adapter-react": "^0.15.3",
@@ -38,16 +40,15 @@
     "ipfs-core": "^0.14.3",
     "ipfs-http-client": "^56.0.3",
     "next": "^12.1.0",
+    "nodemon": "^2.0.19",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-loader-spinner": "^6.0.0-0"
+    "react-loader-spinner": "^6.0.0-0",
+    "three": "^0.134.0"
   },
   "devDependencies": {
-    "@react-three/drei": "^7.20.5",
-    "@react-three/fiber": "^7.0.19",
     "parcel": "^2.3.1",
     "prettier": "^2.5.1",
-    "shx": "^0.3.3",
-    "three": "^0.134.0"
+    "shx": "^0.3.3"
   }
 }

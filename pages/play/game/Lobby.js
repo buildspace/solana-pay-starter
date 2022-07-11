@@ -54,7 +54,7 @@ const UserWrapper = ({ position, rotation, id }) => {
             geometry={new BoxBufferGeometry()}
             material={new MeshNormalMaterial()}
         >
-            {/* Optionally show the ID above the user's mesh */}
+            {/* Optionally show the ID above the user's mesh - TODO swap with publicKey! */}
             <Text
                 position={[0, 1.0, 0]}
                 color="black"

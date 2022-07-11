@@ -67,7 +67,7 @@ const renderAdminPanel = () => (
   useEffect(() => {
     // Check if this address already has already purchased this item
     // If so, fetch the item and set paid to true
-    // Async function to avoid blocking the UI
+    // Async function to avoid blocking the UI?
     async function checkPurchased() {
       const purchased = await hasPurchased(publicKey, itemID);
       if (purchased) {
@@ -113,7 +113,7 @@ const renderAdminPanel = () => (
         </header>
         <Spline scene={SPLINE_SCENE} />
         <div className="middle-row">
-        <p>You should make a donation first!</p>
+        <p>Please make a donation first!</p>
           {renderHome()}
         <p>Mint donation contract is being built!</p>
         </div>
