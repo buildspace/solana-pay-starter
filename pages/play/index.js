@@ -95,9 +95,8 @@ const renderAdminPanel = () => (
     <div className="App">
       <div className="container">
         <header className="header">
-            {/*<p className="header-left">🌑PLAY</p>*/}
+            {isOwner && renderAdminPanel()}
             <header className="header-right">
-                {isOwner && renderAdminPanel()}
                 {publicKey ? renderConnectedProfile() : renderNotConnectedContainer()}
               </header>
         </header>
@@ -117,9 +116,9 @@ const renderAdminPanel = () => (
           {renderHome()}
         <p>Mint donation contract is being built!</p>
         </div>
+        <Footer/>
         </>
       )}
-        <Footer/>
       </div>
     </div>
   );

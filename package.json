@@ -1,8 +1,8 @@
 {
-  "name": "@solana/wallet-adapter-nextjs-starter",
+  "name": "@nitsuah-labs/darkmoon",
   "version": "0.8.2",
-  "author": "Solana Maintainers <maintainers@solana.foundation>",
-  "repository": "https://github.com/solana-labs/wallet-adapter",
+  "author": "Nitsuah Labs <nitsuahlabs@gmail.com>",
+  "repository": "https://github.com/Nitsuah-Labs/darkmoon",
   "license": "Apache-2.0",
   "files": [
     "src",
@@ -31,24 +31,17 @@
     "@solana/wallet-adapter-wallets": "^0.16.0",
     "@solana/web3.js": "^1.36.0",
     "@splinetool/react-spline": "^2.2.1",
-    "@splinetool/runtime": "^0.9.69",
     "bignumber.js": "^9.0.2",
     "crypto-js": "^4.1.1",
-    "express": "^4.18.1",
-    "express-promise-router": "^4.1.1",
-    "fs": "^0.0.1-security",
     "ipfs-core": "^0.14.3",
     "ipfs-http-client": "^56.0.3",
     "next": "^12.1.0",
-    "nodemon": "^2.0.19",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-loader-spinner": "^6.0.0-0",
     "three": "^0.134.0"
   },
   "devDependencies": {
-    "parcel": "^2.3.1",
-    "prettier": "^2.5.1",
     "shx": "^0.3.3"
   }
 }
