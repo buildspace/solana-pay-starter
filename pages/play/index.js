@@ -100,8 +100,6 @@ const renderAdminPanel = () => (
                 {publicKey ? renderConnectedProfile() : renderNotConnectedContainer()}
               </header>
         </header>
-        
-        
       {status === STATUS.Paid ? (
         <>
         {renderGameContainer()}
