@@ -9,8 +9,8 @@ import {
   SolflareWalletAdapter,
   TorusWalletAdapter,
 } from "@solana/wallet-adapter-wallets";
+import {CoinbaseWalletAdapter} from "@solana/wallet-adapter-coinbase";
 import { clusterApiUrl } from "@solana/web3.js";
-
 import "@solana/wallet-adapter-react-ui/styles.css";
 import "../styles/globals.css";
 import "../styles/App.css";
@@ -25,9 +25,10 @@ const App = ({ Component, pageProps }) => {
 
   // @solana/wallet-adapter-wallets includes all the adapters but supports tree shaking and lazy loading --
   // Only the wallets you configure here will be compiled into your application, and only the dependencies
-  // of wallets that your users connect to will be loaded
+  // of wallets that your users connect to will be loaded, ADDING COINBASE WALLET NOW!
   const wallets = useMemo(
     () => [
+      new CoinbaseWalletAdapter(),
       new PhantomWalletAdapter(),
       new GlowWalletAdapter(),
       new SlopeWalletAdapter(),
