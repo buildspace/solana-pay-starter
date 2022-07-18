@@ -19,7 +19,8 @@ const STATUS = {
 const GamePage = () => {
   const { publicKey } = useWallet();
   const user = useWallet().toString();
-  const isOwner = ( publicKey ? user.toString() === process.env.NEXT_PUBLIC_OWNER_PUBLIC_KEY : false );
+  const isOwner = false;
+  /* const isOwner = ( publicKey ? user.toString() === process.env.NEXT_PUBLIC_OWNER_PUBLIC_KEY : false ); */
   // const isHodlr = ( publicKey );
   const [status, setStatus] = useState(STATUS.Initial); // Tracking transaction status
   const [loading, setLoading] = useState(false);
@@ -64,26 +65,9 @@ const renderAdminPanel = () => (
 </div>
 );
 
-  useEffect(() => {
-    // Check if this address already has already purchased this item
-    // If so, fetch the item and set paid to true
-    // Async function to avoid blocking the UI?
-    async function checkPurchased() {
-      const purchased = await hasPurchased(publicKey, itemID);
-      if (purchased) {
-        setStatus(STATUS.Paid);
-        console.log( `${publicKey} has purchased itemID#1 and can play!`);
-      } else if (isOwner) {
-        setStatus(STATUS.Paid);
-        console.log( `${publicKey} admin has logged in - NOSUDO`);
-      }
-      }
-      checkPurchased();
-    }, [publicKey, itemID]);
-
   const renderGameContainer = () => (
     <div className="App">
-      {publicKey ? <Lobby/> : <div className="middle-row">{renderNotConnectedContainer()}<p>You are logged out</p>{renderHome()}</div> }
+      <Lobby/>
     </div>
   );
 
@@ -95,24 +79,27 @@ const renderAdminPanel = () => (
     <div className="App">
       <div className="container">
         <header className="header">
-            {isOwner && renderAdminPanel()}
             <header className="header-right">
-                {publicKey ? renderConnectedProfile() : renderNotConnectedContainer()}
-              </header>
+            {isOwner && renderAdminPanel()}
+            {publicKey ? renderConnectedProfile() : renderNotConnectedContainer()}
+            </header>
         </header>
-      {status === STATUS.Paid ? (
+      {status === STATUS.Initial ? (
         <>
         {renderGameContainer()}
         </>
       ) : (
         <>
         <header className="header-container">
+          <header className="header-left">
+            <Link href="/play"><h1>PLAY🌑</h1></Link>
+          </header>
         </header>
         <Spline scene={SPLINE_SCENE} />
         <div className="middle-row">
-        <p>Please make a donation first!</p>
+            <p>Please make a donation first!</p>
           {renderHome()}
-        <p>Mint donation contract is being built!</p>
+            <p>Mint donation contract is being built!</p>
         </div>
         <Footer/>
         </>

@@ -91,7 +91,9 @@ const App = () => {
         </div>
           <div className="middle-row">
             {isOwner && (<button className="cta-button admin-wallet-button" onClick={() => setCreating(!creating)}>{creating ? "Close" : "Add Product"}</button>)}
+            <p>A web3 free to play game that funds opensource projects.</p>
             <p>Minting is currently paused - contract in development!</p>
+            <p>Cosmetics and DAO based enhancements to the game will fund the code and </p><button className="purp-wallet"><Link href="https://github.com/Nitsuah-Labs/darkmoon/" color="purple"> services we source.</Link></button>
           </div>
           
         <Footer/>

@@ -21,7 +21,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@coinbase/wallet-sdk": "^3.3.0",
     "@project-serum/anchor": "^0.25.0-beta.1",
     "@react-three/drei": "^7.20.5",
     "@react-three/fiber": "^7.0.19",
@@ -40,7 +39,7 @@
     "next": "^12.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-loader-spinner": "^6.0.0-0",
+    "react-loader-spinner": "^5.1.5",
     "three": "^0.134.0"
   },
   "devDependencies": {
