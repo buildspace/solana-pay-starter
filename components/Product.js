@@ -7,7 +7,7 @@ export default function Product({ product }) {
 
   return (
     <div className={styles.product_container}>
-      <div >
+      <div>
         <img className={styles.product_image} src={image_url} alt={name} />
       </div>
 
@@ -18,7 +18,9 @@ export default function Product({ product }) {
         </div>
 
         <div className={styles.product_action}>
-          <div className={styles.product_price}>{price} USDC</div>
+          <div className={styles.product_price}>
+            {price} {process.env.NEXT_PUBLIC_CURRENCY}
+          </div>
           <Buy itemID={id} />
         </div>
       </div>

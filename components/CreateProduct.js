@@ -5,7 +5,6 @@ import styles from "../styles/CreateProduct.module.css";
 const client = create("https://ipfs.infura.io:5001/api/v0");
 
 const CreateProduct = () => {
-
   const [newProduct, setNewProduct] = useState({
     name: "",
     price: "",
@@ -39,7 +38,7 @@ const CreateProduct = () => {
     } catch (error) {
       console.log("Error uploading file: ", error);
     } finally {
-      setUploaded(true);      
+      setUploaded(true);
       setUploading(false);
     }
   }
@@ -59,15 +58,15 @@ const CreateProduct = () => {
       const data = await response.json();
       if (response.status === 200) {
         alert("Product added!");
-      }
-      else{
+      } else {
         alert("Unable to add product: ", data.error);
       }
-
     } catch (error) {
       console.log(error);
     }
   };
+
+  const price = "0.01" + process.env.NEXT_PUBLIC_CURRENCY;
 
   return (
     <div className={styles.background_blur}>
@@ -100,13 +99,13 @@ const CreateProduct = () => {
               <input
                 className={styles.input}
                 type="text"
-                placeholder="0.01 USDC"
+                placeholder={price}
                 onChange={(e) => {
                   setNewProduct({ ...newProduct, price: e.target.value });
                 }}
               />
             </div>
-            
+
             <div className={styles.flex_row}>
               <input
                 className={styles.input}
@@ -116,7 +115,7 @@ const CreateProduct = () => {
                   setNewProduct({ ...newProduct, image_url: e.target.value });
                 }}
               />
-            </div>      
+            </div>
             <textarea
               className={styles.text_area}
               placeholder="Description here..."

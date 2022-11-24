@@ -16,10 +16,11 @@ import products from "./products.json";
 const sellerAddress = process.env.NEXT_PUBLIC_OWNER_PUBLIC_KEY;
 const sellerPublicKey = new PublicKey(sellerAddress);
 console.log(process.env.NEXT_PUBLIC_SOLANA_NETWORK);
-const network = process.env.NEXT_PUBLIC_SOLANA_NETWORK == "DEVNET"
-  ? WalletAdapterNetwork.Devnet : WalletAdapterNetwork.Mainnet;  
-const usdcAddress = new PublicKey((network == WalletAdapterNetwork.Devnet)
-  ? "Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr" : "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v");
+const network =
+  process.env.NEXT_PUBLIC_SOLANA_NETWORK == "DEVNET" ? WalletAdapterNetwork.Devnet : WalletAdapterNetwork.Mainnet;
+const tokenAddress = new PublicKey(
+  network == WalletAdapterNetwork.Devnet ? process.env.NEXT_PUBLIC_DEV_SPL_TOKEN : process.env.NEXT_PUBLIC_MAIN_SPL_TOKEN
+);
 
 const createTransaction = async (req, res) => {
   try {
@@ -47,7 +48,7 @@ const createTransaction = async (req, res) => {
         message: "Item not found. please check item ID",
       });
     }
-    
+
     // Convert our price to the correct format
     const bigAmount = BigNumber(itemPrice);
     const buyerPublicKey = new PublicKey(buyer);
@@ -56,16 +57,16 @@ const createTransaction = async (req, res) => {
 
     // A blockhash is sort of like an ID for a block. It lets you identify each block.
     const { blockhash } = await connection.getLatestBlockhash("finalized");
-    
-    // The first two things we need - a recent block ID 
-    // and the public key of the fee payer 
+
+    // The first two things we need - a recent block ID
+    // and the public key of the fee payer
     // const tx = new Transaction({
     //   recentBlockhash: blockhash,
     //   feePayer: buyerPublicKey,
     // });
     const tx = new Transaction({
       blockhash: blockhash,
-      lastValidBlockHeight:0,
+      lastValidBlockHeight: 0,
       feePayer: buyerPublicKey,
       // feePayer: sellerPublicKey,
     });
@@ -75,35 +76,35 @@ const createTransaction = async (req, res) => {
     // const transferInstruction = SystemProgram.transfer({
     //   fromPubkey: buyerPublicKey,
     //   // Lamports are the smallest unit of SOL, like Gwei with Ethereum
-    //   lamports: bigAmount.multipliedBy(LAMPORTS_PER_SOL).toNumber(), 
+    //   lamports: bigAmount.multipliedBy(LAMPORTS_PER_SOL).toNumber(),
     //   toPubkey: sellerPublicKey,
     // });
 
     // This is new, we're getting the mint address of the token we want to transfer
-    const buyerUsdcAddress = await getAssociatedTokenAddress(usdcAddress, buyerPublicKey);
-    const shopUsdcAddress = await getAssociatedTokenAddress(usdcAddress, sellerPublicKey); 
-    const usdcMint = await getMint(connection, usdcAddress);
+    const buyertokenAddress = await getAssociatedTokenAddress(tokenAddress, buyerPublicKey);
+    const shoptokenAddress = await getAssociatedTokenAddress(tokenAddress, sellerPublicKey);
+    const tokenMint = await getMint(connection, tokenAddress);
 
     // Here we're creating a different type of transfer instruction
     const transferInstruction = createTransferCheckedInstruction(
-      buyerUsdcAddress, 
-      usdcAddress,     // This is the address of the token we want to transfer
-      shopUsdcAddress, 
-      buyerPublicKey, 
-      bigAmount.toNumber() * 10 ** (await usdcMint).decimals, 
-      usdcMint.decimals // The token could have any number of decimals
+      buyertokenAddress,
+      tokenAddress, // This is the address of the token we want to transfer
+      shoptokenAddress,
+      buyerPublicKey,
+      bigAmount.toNumber() * 10 ** (await tokenMint).decimals,
+      tokenMint.decimals // The token could have any number of decimals
     );
 
     // We're adding more instructions to the transaction
     transferInstruction.keys.push({
       // We'll use our OrderId to find this transaction later
-      pubkey: new PublicKey(orderID), 
+      pubkey: new PublicKey(orderID),
       isSigner: false,
       isWritable: false,
     });
 
     tx.add(transferInstruction);
-  
+
     // Formatting our transaction
     const serializedTransaction = tx.serialize({
       requireAllSignatures: false,
