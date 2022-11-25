@@ -18,9 +18,9 @@ export default function Buy({ itemID }) {
   const orderID = useMemo(() => Keypair.generate().publicKey, []); // Public key used to identify the order
 
   const [item, setItem] = useState(null); // IPFS hash & filename of the purchased item
-  const [loading, setLoading] = useState(true);  // Loading state of all above
+  const [loading, setLoading] = useState(true); // Loading state of all above
   const [status, setStatus] = useState(STATUS.Initial); // Tracking transaction status
-  
+
   // useMemo is a React hook that only computes the value if the dependencies change
   const order = useMemo(
     () => ({
@@ -31,24 +31,25 @@ export default function Buy({ itemID }) {
     [publicKey, orderID, itemID]
   );
 
-  // Fetch the transaction object from the server 
+  // Fetch the transaction object from the server
   const processTransaction = async () => {
     setLoading(true);
-    const txResponse = await fetch("../api/createTransaction", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(order),
-    });
-    const txData = await txResponse.json();
-    
-    // We create a transaction object
-    const tx = Transaction.from(Buffer.from(txData.transaction, "base64"));
-    console.log("Tx data is", tx);
-    
-    // Attempt to send the transaction to the network
     try {
+      const txResponse = await fetch("../api/createTransaction", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(order),
+      });
+      console.log(txResponse);
+      const txData = await txResponse.json();
+
+      // We create a transaction object
+      const tx = Transaction.from(Buffer.from(txData.transaction, "base64"));
+      console.log("Tx data is", tx);
+
+      // Attempt to send the transaction to the network
       // Send the transaction to the network
       const txHash = await sendTransaction(tx, connection);
       console.log(`Transaction sent: https://solscan.io/tx/${txHash}?cluster=devnet`);
@@ -74,7 +75,7 @@ export default function Buy({ itemID }) {
     }
     checkPurchased();
   }, [publicKey, itemID]);
-  
+
   useEffect(() => {
     // Check if transaction was confirmed
     if (status === STATUS.Submitted) {
