@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "name": "Dragon balls",
+    "price": "0.05",
+    "description": "Get these seven dragon balls for only $0.05! Dragon not included!",
+    "image_url": "https://2.bp.blogspot.com/-nDwsN5P6qJM/U0KWkKxLxGI/AAAAAAAAMrk/GRZQBkMutL4/s1600/dragonballs.jpg",
+    "filename": "Dragonballs.zip",
+    "hash": "QmXiEqER5o1AzwQoc3JPAjYurkRvyZW2HVhXYvsRsgU7Cj"
+  },
+  {
+    "id": 1,
+    "name": "Shenron",
+    "price": "15",
+    "image_url": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2019/11/dbz-kakarot-dragon-balls-fights.jpg",
+    "description": "Here is the Dragon !! \nDon't forget to make a clever wish this time ;-)",
+    "filename": "Shenron.zip",
+    "hash": "Qmep7RkD7cnMezDKpiyvj13qCAuudqBxWNvGJWZZeSpzdH"
+  }
+]
