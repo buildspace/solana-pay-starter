@@ -1,8 +1,21 @@
 import React, { useState } from "react";
-import { create } from "ipfs-http-client";
+const ipfsClient = require('ipfs-http-client');
 import styles from "../styles/CreateProduct.module.css";
 
-const client = create("https://ipfs.infura.io:5001/api/v0");
+const projectId = process.env.NEXT_PUBLIC_IPFS_INFURA_PROJECTID
+const projectSecret = process.env.NEXT_PUBLIC_IPFS_INFURA_PROJECT_SECRET_KEY
+
+const auth =
+'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
+
+const client = ipfsClient.create({
+  host: 'ipfs.infura.io',
+  port: 5001,
+  protocol: 'https',
+  headers: {
+    authorization: auth,
+  },
+});
 
 const CreateProduct = () => {
 
@@ -19,12 +32,13 @@ const CreateProduct = () => {
     setUploading(true);
     const files = e.target.files;
     try {
-      console.log(files[0]);
+      console.log('file[0] is:')
+      console.log(files[0].name);
       const added = await client.add(files[0]);
       setFile({ filename: files[0].name, hash: added.path });
       console.log('debut')
-      console.log(filname)
-      console.log(hash)
+      console.log(file.filename)
+      console.log(file.hash)
       console.log('fin')
     } catch (error) {
       console.log("Error uploading file: ", error);
@@ -69,7 +83,7 @@ const CreateProduct = () => {
             <input
               type="file"
               className={styles.input}
-              accept=".zip,.rar,.7zip"
+              accept=".zip,.rar,.7zip,.gif"
               placeholder="Emojis"
               onChange={onChange}
             />
