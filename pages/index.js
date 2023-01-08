@@ -44,21 +44,22 @@ const App = () => {
       <div className="button-container">
         <WalletMultiButton className="cta-button connect-wallet-button" />
       </div>
-      <button className="cta-button play-button">
-        <Link href="/about"><a>ABOUT</a></Link>
-      </button>
     </div>
   );
 
   const renderAdminPanel = () => (
     <div className="row" style={{ justifyContent:'center' }}>
       <div className="button-container">
+      <td>
       <button className="cta-button admin-wallet-button">
         <Link href="/admin"><a>ADMIN</a></Link>
       </button>
+      <tr>
       <button className="cta-button play-button">
         <Link href="/play"><a>PLAY🌑</a></Link>
       </button>
+      </tr>
+      </td>
     </div>
     </div>
   );
@@ -80,22 +81,23 @@ const App = () => {
         <header className="header-container">
             <p className="header">DarkMoon🌑Market</p>
               <header className="header-right">
-                {isOwner && renderAdminPanel()}
+                <tr>
                 {publicKey ? renderConnectedProfile() : <></>}
+                </tr>
               </header>
         </header>
         <Spline scene={SPLINE_SCENE} />
-        <div className="middle">
-            {publicKey ? renderItemBuyContainer() : renderNotConnectedContainer()}
-            {creating && <CreateProduct />}
-        </div>
           <div className="middle-row">
-            {isOwner && (<button className="cta-button admin-wallet-button" onClick={() => setCreating(!creating)}>{creating ? "Close" : "Add Product"}</button>)}
-            <p>A web3 free to play game that funds opensource projects.</p>
-            <p>Minting is currently paused - contract in development!</p>
-            <p>Cosmetics and DAO based enhancements to the game will fund the code and </p><button className="purp-wallet"><Link href="https://github.com/Nitsuah-Labs/darkmoon/" color="purple"> services we source.</Link></button>
+            <tr>
+            <button className="cta-button play-button">
+              <Link href="/about"><a>ABOUT</a></Link></button>
+              <td><p>A web3 effort that funds opensource projects.</p><br /></td>
+              </tr>
+              <div className="middle">
+                {publicKey ? renderItemBuyContainer() : renderNotConnectedContainer()}
+                {creating && <CreateProduct />}
+              </div>
           </div>
-          
         <Footer/>
       </div>
       </div>

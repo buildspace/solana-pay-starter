@@ -77,12 +77,10 @@
 }
 
 .middle {
-  margin: 0;
   font-weight: bold;
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: absolute;
+  align-items: middle;
   color: white;
   width: 100%;
   height: 50%;
@@ -90,6 +88,7 @@
   margin: 5% auto; /* Will not center vertically and won't work in IE6/7. */
   left: 0;
   right: 0;
+  overflow-y:auto;
 }
 
 .middle-row {
@@ -148,6 +147,14 @@
 .admin-wallet-button {
   color: white;
   background: -webkit-linear-gradient(left, #000000, #e23b35);
+  background-size: 200% 200%;
+  animation: gradient-animation 4s ease infinite;
+  max-width: 300px;
+}
+
+.purp-wallet {
+  color: rgb(255, 255, 255);
+  background: -webkit-linear-gradient(left, #000000, #8401a1);
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
   max-width: 300px;

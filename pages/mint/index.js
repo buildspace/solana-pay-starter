@@ -57,7 +57,7 @@ const renderAdminPanel = () => (
 
   const renderItemMintContainer = () => (
     <div className="middle-row">
-      <h2>Minting is currently disabled while contract is developed!</h2>
+      <h2>Minting is currently enabled for testing while contract is on DEVNET!</h2>
     </div>
   );
 

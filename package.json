@@ -34,7 +34,7 @@
     "@splinetool/react-spline": "^2.2.1",
     "bignumber.js": "^9.0.2",
     "crypto-js": "^4.1.1",
-    "ipfs-core": "^0.14.3",
+    "ipfs-core": "^0.17.0",
     "ipfs-http-client": "^56.0.3",
     "next": "^12.1.0",
     "react": "^17.0.2",

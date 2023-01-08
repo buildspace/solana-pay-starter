@@ -130,14 +130,6 @@ export default function Buy({ itemID }) {
           cta="Download alien"
         />
         <div className="header">
-            <button className="cta-button mint-button" disabled="true">
-              <a>MINT SHIP</a>
-            </button>
-            <button className="cta-button play-button" disabled={loading}>
-            <Link href="/play">
-              <a>PLAY ALPHA🌑</a>
-              </Link>
-            </button>
         </div>
       </div>
       ) : (
