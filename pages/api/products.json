@@ -1,0 +1,11 @@
+[
+    {
+      "id": 1,
+      "name": "Ghosts",
+      "price": "0.01",
+      "description": "Catch Some Ghosts",
+      "image_url": "https://i.imgur.com/rVD8bjt.png",
+      "filename": "ghosts.zip",
+      "hash": "QmZ1JBpC2nwGd4jmNBXL33sFVCLQfKEDTSKgQAGVvQaRbQ"
+    }
+  ]
