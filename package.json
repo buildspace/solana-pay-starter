@@ -21,24 +21,24 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@solana/pay": "^0.2.0",
-    "@solana/wallet-adapter-base": "^0.9.4",
-    "@solana/wallet-adapter-react": "^0.15.3",
-    "@solana/wallet-adapter-react-ui": "^0.9.5",
-    "@solana/wallet-adapter-wallets": "^0.16.0",
-    "@solana/web3.js": "^1.36.0",
-    "bignumber.js": "^9.0.2",
+    "@solana/pay": "^0.2.4",
+    "@solana/wallet-adapter-base": "^0.9.20",
+    "@solana/wallet-adapter-react": "^0.15.28",
+    "@solana/wallet-adapter-react-ui": "^0.9.27",
+    "@solana/wallet-adapter-wallets": "^0.19.10",
+    "@solana/web3.js": "^1.73.0",
+    "bignumber.js": "^9.1.1",
     "crypto-js": "^4.1.1",
-    "ipfs-core": "^0.14.3",
-    "ipfs-http-client": "^56.0.3",
-    "next": "^12.1.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "ipfs-core": "^0.18.0",
+    "ipfs-http-client": "^60.0.0",
+    "next": "^13.1.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-loader-spinner": "^6.0.0-0"
   },
   "devDependencies": {
-    "parcel": "^2.3.1",
-    "prettier": "^2.5.1",
-    "shx": "^0.3.3"
+    "parcel": "^2.8.3",
+    "prettier": "^2.8.3",
+    "shx": "^0.3.4"
   }
 }
