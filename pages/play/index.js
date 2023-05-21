@@ -5,6 +5,7 @@ import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import { InfinitySpin } from 'react-loader-spinner';
 import { hasPurchased } from '../../lib/api';
 import Lobby from "./game/Lobby.js";
+import RacingGame from "./game/asteroid.js";
 import Spline from '@splinetool/react-spline';
 import Link from 'next/link';
 
@@ -67,7 +68,7 @@ const renderAdminPanel = () => (
 
   const renderGameContainer = () => (
     <div className="App">
-      <Lobby/>
+    {<Lobby />}
     </div>
   );
 
